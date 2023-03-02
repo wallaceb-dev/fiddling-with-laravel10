@@ -1,7 +1,9 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +19,16 @@ use Illuminate\Support\Facades\App;
 Route::get('/', function () {
     // return view('welcome');
 
-    dd(
-        App::environment(),
-        App::environment('local'),
-        App::environment('devlopment'),
-        App::environment(['local', 'staging'])
-    );
+    // dd(
+    //     App::environment(),
+    //     App::environment('local'),
+    //     App::environment('devlopment'),
+    //     App::environment(['local', 'staging'])
+    // );
+
+    // dd(DB::table('users')->get());
+});
+
+Route::get('/users', function () {
+    return view('users');
 });

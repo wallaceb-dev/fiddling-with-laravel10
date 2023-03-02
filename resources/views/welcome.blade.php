@@ -136,5 +136,7 @@
                 </div>
             </div>
         </div>
+
+        <livewire:search-users />
     </body>
 </html>
